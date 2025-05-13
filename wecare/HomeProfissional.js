@@ -209,14 +209,14 @@ export default function HomeProfissionalScreen({ navigation }) {
       </View>
 
       <View style={styles.infoSection}>
-        <Text style={styles.sectionTitle}>Recursos Profissionais</Text>
+        <Text style={styles.sectionTitle}>Saúde em Destaque</Text>
 
         <View style={styles.infoCard}>
           <View style={styles.infoIconContainer}>
-            <Ionicons name="document-text" size={30} color="#2e7d32" />
+            <Ionicons name="information-circle" size={30} color="#2e7d32" />
           </View>
           <View style={styles.infoContent}>
-            <Text style={styles.infoTitle}>Atualizações Profissionais</Text>
+            <Text style={styles.infoTitle}>Dicas para Profissionais</Text>
             <Text style={styles.infoText}>
               Mantenha-se atualizado com os principais periódicos e publicações da sua área para oferecer tratamentos baseados em evidências.
             </Text>
@@ -225,24 +225,12 @@ export default function HomeProfissionalScreen({ navigation }) {
 
         <View style={styles.infoCard}>
           <View style={styles.infoIconContainer}>
-            <Ionicons name="people" size={30} color="#2e7d32" />
+            <Ionicons name="medkit" size={30} color="#2e7d32" />
           </View>
           <View style={styles.infoContent}>
             <Text style={styles.infoTitle}>Comunicação Eficiente</Text>
             <Text style={styles.infoText}>
               Explicar procedimentos e tratamentos em linguagem acessível aumenta a adesão e satisfação dos pacientes com o tratamento.
-            </Text>
-          </View>
-        </View>
-
-        <View style={styles.infoCard}>
-          <View style={styles.infoIconContainer}>
-            <Ionicons name="time" size={30} color="#2e7d32" />
-          </View>
-          <View style={styles.infoContent}>
-            <Text style={styles.infoTitle}>Gestão do Tempo</Text>
-            <Text style={styles.infoText}>
-              Organize sua agenda com intervalos adequados entre consultas para reduzir atrasos e melhorar a experiência dos pacientes.
             </Text>
           </View>
         </View>
@@ -371,34 +359,43 @@ const styles = StyleSheet.create({
   quickActions: {
     padding: 16,
   },
+  infoSection: {
+    padding: 16,
+    paddingTop: 0,
+  },
   sectionTitle: {
     fontSize: 18,
     fontWeight: "bold",
     marginBottom: 16,
     color: "#333",
   },
-  actionButtonsRow: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
-  },
-  actionButton: {
-    width: "23%",
+  infoCard: {
     backgroundColor: "white",
     borderRadius: 12,
-    padding: 12,
-    alignItems: "center",
+    padding: 16,
+    marginBottom: 16,
+    flexDirection: "row",
     elevation: 2,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.05,
     shadowRadius: 2,
-    marginBottom: 8,
   },
-  actionButtonText: {
-    fontSize: 12,
+  infoIconContainer: {
+    marginRight: 16,
+  },
+  infoContent: {
+    flex: 1,
+  },
+  infoTitle: {
+    fontSize: 16,
+    fontWeight: "bold",
     color: "#333",
-    marginTop: 6,
-    textAlign: "center",
+    marginBottom: 4,
+  },
+  infoText: {
+    fontSize: 14,
+    color: "#666",
+    lineHeight: 20,
   },
 });
