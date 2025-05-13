@@ -208,29 +208,43 @@ export default function HomeProfissionalScreen({ navigation }) {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.quickActions}>
-        <Text style={styles.sectionTitle}>Acesso Rápido</Text>
+      <View style={styles.infoSection}>
+        <Text style={styles.sectionTitle}>Recursos Profissionais</Text>
 
-        <View style={styles.actionButtonsRow}>
-          <TouchableOpacity style={styles.actionButton}>
-            <Ionicons name="people" size={24} color="#2e7d32" />
-            <Text style={styles.actionButtonText}>Pacientes</Text>
-          </TouchableOpacity>
+        <View style={styles.infoCard}>
+          <View style={styles.infoIconContainer}>
+            <Ionicons name="document-text" size={30} color="#2e7d32" />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.infoTitle}>Atualizações Profissionais</Text>
+            <Text style={styles.infoText}>
+              Mantenha-se atualizado com os principais periódicos e publicações da sua área para oferecer tratamentos baseados em evidências.
+            </Text>
+          </View>
+        </View>
 
-          <TouchableOpacity style={styles.actionButton}>
-            <Ionicons name="document-text" size={24} color="#2e7d32" />
-            <Text style={styles.actionButtonText}>Prontuários</Text>
-          </TouchableOpacity>
+        <View style={styles.infoCard}>
+          <View style={styles.infoIconContainer}>
+            <Ionicons name="people" size={30} color="#2e7d32" />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.infoTitle}>Comunicação Eficiente</Text>
+            <Text style={styles.infoText}>
+              Explicar procedimentos e tratamentos em linguagem acessível aumenta a adesão e satisfação dos pacientes com o tratamento.
+            </Text>
+          </View>
+        </View>
 
-          <TouchableOpacity style={styles.actionButton}>
-            <Ionicons name="stats-chart" size={24} color="#2e7d32" />
-            <Text style={styles.actionButtonText}>Estatísticas</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.actionButton}>
-            <Ionicons name="settings" size={24} color="#2e7d32" />
-            <Text style={styles.actionButtonText}>Configurações</Text>
-          </TouchableOpacity>
+        <View style={styles.infoCard}>
+          <View style={styles.infoIconContainer}>
+            <Ionicons name="time" size={30} color="#2e7d32" />
+          </View>
+          <View style={styles.infoContent}>
+            <Text style={styles.infoTitle}>Gestão do Tempo</Text>
+            <Text style={styles.infoText}>
+              Organize sua agenda com intervalos adequados entre consultas para reduzir atrasos e melhorar a experiência dos pacientes.
+            </Text>
+          </View>
         </View>
       </View>
     </ScrollView>

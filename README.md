@@ -1,2 +1,1 @@
 # WeCare
-# WeCare
