@@ -15,7 +15,7 @@ import axios from "axios";
 import { Picker } from "@react-native-picker/picker";
 
 
-const API_URL = "http://192.168.0.36:3000";
+const API_URL = "http://192.168.3.2:3000";
 
 
 export default function CadastroScreen({ navigation }) {

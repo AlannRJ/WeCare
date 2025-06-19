@@ -13,7 +13,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 
 
-const API_URL = "http://192.168.0.36:3000";
+const API_URL = "http://192.168.3.2:3000";
 
 
 export default function AgendarConsulta({ navigation }) {
@@ -101,7 +101,13 @@ export default function AgendarConsulta({ navigation }) {
     );
   };
 
-  const filteredConsultas = consultas.filter(c => c.status === activeTab);
+  const filteredConsultas = consultas.filter(c => {
+    if (activeTab === 'agendado') {
+      return c.status === 'agendado' || c.status === 'confirmado';
+    } else {
+      return c.status === 'concluído';
+    }
+  });
 
   const renderConsulta = ({ item }) => (
     <View style={styles.consultaCard}>
@@ -128,10 +134,14 @@ export default function AgendarConsulta({ navigation }) {
         <View style={styles.statusContainer}>
           <View style={[
             styles.statusIndicator, 
-            item.status === 'agendado' ? styles.statusAgendado : styles.statusConcluido
+            item.status === 'agendado' ? styles.statusAgendado : 
+            item.status === 'confirmado' ? styles.statusConfirmado : 
+            styles.statusConcluido
           ]} />
           <Text style={styles.statusText}>
-            {item.status === 'agendado' ? 'Agendado' : 'Concluído'}
+            {item.status === 'agendado' ? 'Agendado' : 
+             item.status === 'confirmado' ? 'Confirmado' : 
+             'Concluído'}
           </Text>
         </View>
       </View>
@@ -312,6 +322,9 @@ const styles = StyleSheet.create({
   },
   statusAgendado: {
     backgroundColor: '#2e7d32',
+  },
+  statusConfirmado: {
+    backgroundColor: '#FFC107',
   },
   statusConcluido: {
     backgroundColor: '#2196f3',

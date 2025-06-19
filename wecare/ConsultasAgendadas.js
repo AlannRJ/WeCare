@@ -14,7 +14,7 @@ import { Ionicons } from "@expo/vector-icons";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
 
-const API_URL = "http://192.168.0.36:3000";
+const API_URL = "http://192.168.3.2:3000";
 
 
 export default function ConsultasAgendadasScreen({ navigation }) {
